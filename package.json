@@ -1,0 +1,39 @@
+{
+  "name": "@public-awesome/stardex-client",
+  "version": "0.2.0",
+  "description": "The official types package for the CosmWasm Stardex protocol",
+  "author": "Tasio Victoria",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "gen:cw": "ts-node codegen.ts && ./scripts/fix_codegen.sh",
+    "gen:zod": "./scripts/generate_zod_schemas.sh",
+    "lint": "eslint .",
+    "codegen": "rm -rf ./src/types && bun run gen:cw && bun run gen:zod",
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.json"
+  },
+  "dependencies": {
+    "@cosmjs/amino": "0.32.3",
+    "@cosmjs/cosmwasm-stargate": "0.32.3",
+    "@cosmjs/encoding": "0.32.3",
+    "@cosmjs/proto-signing": "0.32.3",
+    "@cosmjs/stargate": "0.32.3",
+    "@cosmjs/tendermint-rpc": "0.32.3",
+    "@cosmwasm/ts-codegen": "^1.10.0",
+    "@tanstack/react-query": "^4.36.1",
+    "cosmjs-types": "^0.7.2",
+    "cosmwasm": "^1.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "ts-to-zod": "^3.2.0",
+    "typescript": "5.1.6",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {},
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": "@uju-labs/tsconfig/common.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "jsx": "preserve"
+  },
+  "include": ["src/**/*.ts"]
+}

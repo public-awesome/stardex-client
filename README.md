@@ -1,1 +1,1 @@
-# `@uju-labs/stardex-client`
+# `@stargazezone/stardex-client`

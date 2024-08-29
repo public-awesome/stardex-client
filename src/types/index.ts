@@ -32,9 +32,17 @@ import * as _24 from "./StardexRouter.types";
 import * as _25 from "./StardexRouter.client";
 import * as _26 from "./StardexRouter.react-query";
 import * as _27 from "./StardexRouter.provider";
-import * as _28 from "./contractContextProviders";
-import * as _29 from "./contractContextBase";
-import * as _30 from "./contracts-context";
+import * as _28 from "./StardexStakeNative.types";
+import * as _29 from "./StardexStakeNative.client";
+import * as _30 from "./StardexStakeNative.react-query";
+import * as _31 from "./StardexStakeNative.provider";
+import * as _32 from "./StardexStakeRewards.types";
+import * as _33 from "./StardexStakeRewards.client";
+import * as _34 from "./StardexStakeRewards.react-query";
+import * as _35 from "./StardexStakeRewards.provider";
+import * as _36 from "./contractContextProviders";
+import * as _37 from "./contractContextBase";
+import * as _38 from "./contracts-context";
 export namespace contracts {
   export const StardexToken = {
     ..._0,
@@ -78,13 +86,25 @@ export namespace contracts {
     ..._26,
     ..._27
   };
+  export const StardexStakeNative = {
+    ..._28,
+    ..._29,
+    ..._30,
+    ..._31
+  };
+  export const StardexStakeRewards = {
+    ..._32,
+    ..._33,
+    ..._34,
+    ..._35
+  };
   export const undefined = {
-    ..._28
+    ..._36
   };
   export const contractContextBase = {
-    ..._29
+    ..._37
   };
   export const contractsContext = {
-    ..._30
+    ..._38
   };
 }

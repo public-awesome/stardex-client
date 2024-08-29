@@ -30,6 +30,14 @@ codegen({
       name: 'StardexRouter',
       dir: '../../protocols/astroport-core/schemas/astroport-router/',
     },
+    {
+      name: 'StardexStakeNative',
+      dir: '../../protocols/stardex-contracts/schema/stardex-stake-native',
+    },
+    {
+      name: 'StardexStakeRewards',
+      dir: '../../protocols/stardex-contracts/schema/stardex-stake-rewards',
+    },
   ],
   outPath: './src/types',
 

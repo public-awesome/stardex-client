@@ -31,9 +31,17 @@ import * as _24 from "./StardexRouter.types";
 import * as _25 from "./StardexRouter.client";
 import * as _26 from "./StardexRouter.react-query";
 import * as _27 from "./StardexRouter.provider";
-import * as _28 from "./contractContextProviders";
-import * as _29 from "./contractContextBase";
-import * as _30 from "./contracts-context";
+import * as _28 from "./StardexStakeNative.types";
+import * as _29 from "./StardexStakeNative.client";
+import * as _30 from "./StardexStakeNative.react-query";
+import * as _31 from "./StardexStakeNative.provider";
+import * as _32 from "./StardexStakeRewards.types";
+import * as _33 from "./StardexStakeRewards.client";
+import * as _34 from "./StardexStakeRewards.react-query";
+import * as _35 from "./StardexStakeRewards.provider";
+import * as _36 from "./contractContextProviders";
+import * as _37 from "./contractContextBase";
+import * as _38 from "./contracts-context";
 export declare namespace contracts {
     const StardexToken: {
         StardexToken: typeof _3.StardexToken;
@@ -655,6 +663,71 @@ export declare namespace contracts {
         StardexRouterQueryClient: typeof _25.StardexRouterQueryClient;
         StardexRouterClient: typeof _25.StardexRouterClient;
     };
+    const StardexStakeNative: {
+        StardexStakeNative: typeof _31.StardexStakeNative;
+        useStardexStakeNativeStakeBalanceAtHeightQuery<TData = string>({ client, args, options }: _30.StardexStakeNativeStakeBalanceAtHeightQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
+        useStardexStakeNativeRewardAccountsQuery<TData_1 = _28.ArrayOfAddr>({ client, options }: _30.StardexStakeNativeRewardAccountsQuery<TData_1>): import("@tanstack/react-query").UseQueryResult<TData_1, Error>;
+        useStardexStakeNativeClaimRewardsMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeClaimRewardsMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeClaimRewardsMutation, unknown>;
+        useStardexStakeNativeClaimMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeClaimMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeClaimMutation, unknown>;
+        useStardexStakeNativeUnstakeMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeUnstakeMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeUnstakeMutation, unknown>;
+        useStardexStakeNativeStakeMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeStakeMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeStakeMutation, unknown>;
+        useStardexStakeNativeRemoveRewardAccountMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeRemoveRewardAccountMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeRemoveRewardAccountMutation, unknown>;
+        useStardexStakeNativeCreateRewardAccountMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeCreateRewardAccountMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeCreateRewardAccountMutation, unknown>;
+        useStardexStakeNativeUpdateConfigMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeUpdateConfigMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _30.StardexStakeNativeUpdateConfigMutation, unknown>;
+        stardexStakeNativeQueryKeys: {
+            contract: readonly [{
+                readonly contract: "stardexStakeNative";
+            }];
+            address: (contractAddress: string | undefined) => readonly [{
+                readonly address: string | undefined;
+                readonly contract: "stardexStakeNative";
+            }];
+            rewardAccounts: (contractAddress: string | undefined, args?: Record<string, unknown> | undefined) => readonly [{
+                readonly method: "reward_accounts";
+                readonly args: Record<string, unknown> | undefined;
+                readonly address: string | undefined;
+                readonly contract: "stardexStakeNative";
+            }];
+            stakeBalanceAtHeight: (contractAddress: string | undefined, args?: Record<string, unknown> | undefined) => readonly [{
+                readonly method: "stake_balance_at_height";
+                readonly args: Record<string, unknown> | undefined;
+                readonly address: string | undefined;
+                readonly contract: "stardexStakeNative";
+            }];
+        };
+        stardexStakeNativeQueries: {
+            rewardAccounts: <TData_2 = _28.ArrayOfAddr>({ client, options }: _30.StardexStakeNativeRewardAccountsQuery<TData_2>) => import("@tanstack/react-query").UseQueryOptions<_28.ArrayOfAddr, Error, TData_2, import("@tanstack/query-core").QueryKey>;
+            stakeBalanceAtHeight: <TData_3 = string>({ client, args, options }: _30.StardexStakeNativeStakeBalanceAtHeightQuery<TData_3>) => import("@tanstack/react-query").UseQueryOptions<string, Error, TData_3, import("@tanstack/query-core").QueryKey>;
+        };
+        StardexStakeNativeQueryClient: typeof _29.StardexStakeNativeQueryClient;
+        StardexStakeNativeClient: typeof _29.StardexStakeNativeClient;
+    };
+    const StardexStakeRewards: {
+        StardexStakeRewards: typeof _35.StardexStakeRewards;
+        useStardexStakeRewardsUserRewardQuery<TData = _32.NullableUserReward>({ client, args, options }: _34.StardexStakeRewardsUserRewardQuery<TData>): import("@tanstack/react-query").UseQueryResult<TData, Error>;
+        useStardexStakeRewardsClaimRewardsMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _34.StardexStakeRewardsClaimRewardsMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _34.StardexStakeRewardsClaimRewardsMutation, unknown>;
+        useStardexStakeRewardsStakeChangeMutation(options?: Omit<import("@tanstack/react-query").UseMutationOptions<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _34.StardexStakeRewardsStakeChangeMutation, unknown>, "mutationFn"> | undefined): import("@tanstack/react-query").UseMutationResult<import("@cosmjs/cosmwasm-stargate").ExecuteResult, Error, _34.StardexStakeRewardsStakeChangeMutation, unknown>;
+        stardexStakeRewardsQueryKeys: {
+            contract: readonly [{
+                readonly contract: "stardexStakeRewards";
+            }];
+            address: (contractAddress: string | undefined) => readonly [{
+                readonly address: string | undefined;
+                readonly contract: "stardexStakeRewards";
+            }];
+            userReward: (contractAddress: string | undefined, args?: Record<string, unknown> | undefined) => readonly [{
+                readonly method: "user_reward";
+                readonly args: Record<string, unknown> | undefined;
+                readonly address: string | undefined;
+                readonly contract: "stardexStakeRewards";
+            }];
+        };
+        stardexStakeRewardsQueries: {
+            userReward: <TData_1 = _32.NullableUserReward>({ client, args, options }: _34.StardexStakeRewardsUserRewardQuery<TData_1>) => import("@tanstack/react-query").UseQueryOptions<_32.NullableUserReward, Error, TData_1, import("@tanstack/query-core").QueryKey>;
+        };
+        StardexStakeRewardsQueryClient: typeof _33.StardexStakeRewardsQueryClient;
+        StardexStakeRewardsClient: typeof _33.StardexStakeRewardsClient;
+    };
     const undefined: {
         getProviders: (address?: string | undefined, cosmWasmClient?: import("@cosmjs/cosmwasm-stargate").CosmWasmClient | undefined, signingCosmWasmClient?: import("@cosmjs/cosmwasm-stargate").SigningCosmWasmClient | undefined) => {
             stardexToken: _3.StardexToken;
@@ -664,6 +737,8 @@ export declare namespace contracts {
             stardexPairStable: _19.StardexPairStable;
             stardexPairConcentrated: _23.StardexPairConcentrated;
             stardexRouter: _27.StardexRouter;
+            stardexStakeNative: _31.StardexStakeNative;
+            stardexStakeRewards: _35.StardexStakeRewards;
         };
     };
     const contractContextBase: {
@@ -673,13 +748,13 @@ export declare namespace contracts {
         NO_SIGNING_CLIENT_ERROR_MESSAGE: "Signing client is not generated. Please check ts-codegen config";
         NO_QUERY_CLIENT_ERROR_MESSAGE: "Query client is not generated. Please check ts-codegen config";
         NO_MESSAGE_COMPOSER_ERROR_MESSAGE: "Message composer client is not generated. Please check ts-codegen config";
-        ContractBase: typeof _29.ContractBase;
+        ContractBase: typeof _37.ContractBase;
     };
     const contractsContext: {
         ContractsProvider: ({ children, contractsConfig, }: {
             children: import("react").ReactNode;
-            contractsConfig: _30.ContractsConfig;
+            contractsConfig: _38.ContractsConfig;
         }) => import("react").JSX.Element;
-        useContracts: () => _28.IContractsContext;
+        useContracts: () => _36.IContractsContext;
     };
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@public-awesome/stardex-client",
-  "version": "0.2.0",
+  "name": "@stargazezone/stardex-client",
+  "version": "0.3.0",
   "description": "The official types package for the CosmWasm Stardex protocol",
   "author": "Tasio Victoria",
   "main": "dist/index.js",

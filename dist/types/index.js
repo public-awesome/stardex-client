@@ -57,9 +57,17 @@ const _24 = __importStar(require("./StardexRouter.types"));
 const _25 = __importStar(require("./StardexRouter.client"));
 const _26 = __importStar(require("./StardexRouter.react-query"));
 const _27 = __importStar(require("./StardexRouter.provider"));
-const _28 = __importStar(require("./contractContextProviders"));
-const _29 = __importStar(require("./contractContextBase"));
-const _30 = __importStar(require("./contracts-context"));
+const _28 = __importStar(require("./StardexStakeNative.types"));
+const _29 = __importStar(require("./StardexStakeNative.client"));
+const _30 = __importStar(require("./StardexStakeNative.react-query"));
+const _31 = __importStar(require("./StardexStakeNative.provider"));
+const _32 = __importStar(require("./StardexStakeRewards.types"));
+const _33 = __importStar(require("./StardexStakeRewards.client"));
+const _34 = __importStar(require("./StardexStakeRewards.react-query"));
+const _35 = __importStar(require("./StardexStakeRewards.provider"));
+const _36 = __importStar(require("./contractContextProviders"));
+const _37 = __importStar(require("./contractContextBase"));
+const _38 = __importStar(require("./contracts-context"));
 var contracts;
 (function (contracts) {
     contracts.StardexToken = {
@@ -104,13 +112,25 @@ var contracts;
         ..._26,
         ..._27
     };
+    contracts.StardexStakeNative = {
+        ..._28,
+        ..._29,
+        ..._30,
+        ..._31
+    };
+    contracts.StardexStakeRewards = {
+        ..._32,
+        ..._33,
+        ..._34,
+        ..._35
+    };
     contracts.undefined = {
-        ..._28
+        ..._36
     };
     contracts.contractContextBase = {
-        ..._29
+        ..._37
     };
     contracts.contractsContext = {
-        ..._30
+        ..._38
     };
 })(contracts || (exports.contracts = contracts = {}));

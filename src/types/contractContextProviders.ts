@@ -27,6 +27,12 @@ import { StardexPairConcentrated } from "./StardexPairConcentrated.provider";
 import { StardexRouterQueryClient } from "./StardexRouter.client";
 import { StardexRouterClient } from "./StardexRouter.client";
 import { StardexRouter } from "./StardexRouter.provider";
+import { StardexStakeNativeQueryClient } from "./StardexStakeNative.client";
+import { StardexStakeNativeClient } from "./StardexStakeNative.client";
+import { StardexStakeNative } from "./StardexStakeNative.provider";
+import { StardexStakeRewardsQueryClient } from "./StardexStakeRewards.client";
+import { StardexStakeRewardsClient } from "./StardexStakeRewards.client";
+import { StardexStakeRewards } from "./StardexStakeRewards.provider";
 export interface IContractsContext {
   stardexToken: IQueryClientProvider<StardexTokenQueryClient> & ISigningClientProvider<StardexTokenClient>;
   stardexCoinRegistry: IQueryClientProvider<StardexCoinRegistryQueryClient> & ISigningClientProvider<StardexCoinRegistryClient>;
@@ -35,6 +41,8 @@ export interface IContractsContext {
   stardexPairStable: IQueryClientProvider<StardexPairStableQueryClient> & ISigningClientProvider<StardexPairStableClient>;
   stardexPairConcentrated: IQueryClientProvider<StardexPairConcentratedQueryClient> & ISigningClientProvider<StardexPairConcentratedClient>;
   stardexRouter: IQueryClientProvider<StardexRouterQueryClient> & ISigningClientProvider<StardexRouterClient>;
+  stardexStakeNative: IQueryClientProvider<StardexStakeNativeQueryClient> & ISigningClientProvider<StardexStakeNativeClient>;
+  stardexStakeRewards: IQueryClientProvider<StardexStakeRewardsQueryClient> & ISigningClientProvider<StardexStakeRewardsClient>;
 }
 export const getProviders = (address?: string, cosmWasmClient?: CosmWasmClient, signingCosmWasmClient?: SigningCosmWasmClient) => ({
   stardexToken: new StardexToken({
@@ -68,6 +76,16 @@ export const getProviders = (address?: string, cosmWasmClient?: CosmWasmClient, 
     signingCosmWasmClient
   }),
   stardexRouter: new StardexRouter({
+    address,
+    cosmWasmClient,
+    signingCosmWasmClient
+  }),
+  stardexStakeNative: new StardexStakeNative({
+    address,
+    cosmWasmClient,
+    signingCosmWasmClient
+  }),
+  stardexStakeRewards: new StardexStakeRewards({
     address,
     cosmWasmClient,
     signingCosmWasmClient

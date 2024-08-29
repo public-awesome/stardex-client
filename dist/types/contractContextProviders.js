@@ -13,6 +13,8 @@ const StardexPair_provider_1 = require("./StardexPair.provider");
 const StardexPairStable_provider_1 = require("./StardexPairStable.provider");
 const StardexPairConcentrated_provider_1 = require("./StardexPairConcentrated.provider");
 const StardexRouter_provider_1 = require("./StardexRouter.provider");
+const StardexStakeNative_provider_1 = require("./StardexStakeNative.provider");
+const StardexStakeRewards_provider_1 = require("./StardexStakeRewards.provider");
 const getProviders = (address, cosmWasmClient, signingCosmWasmClient) => ({
     stardexToken: new StardexToken_provider_1.StardexToken({
         address,
@@ -45,6 +47,16 @@ const getProviders = (address, cosmWasmClient, signingCosmWasmClient) => ({
         signingCosmWasmClient
     }),
     stardexRouter: new StardexRouter_provider_1.StardexRouter({
+        address,
+        cosmWasmClient,
+        signingCosmWasmClient
+    }),
+    stardexStakeNative: new StardexStakeNative_provider_1.StardexStakeNative({
+        address,
+        cosmWasmClient,
+        signingCosmWasmClient
+    }),
+    stardexStakeRewards: new StardexStakeRewards_provider_1.StardexStakeRewards({
         address,
         cosmWasmClient,
         signingCosmWasmClient

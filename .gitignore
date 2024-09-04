@@ -2,6 +2,6 @@
 .DS_Store
 
 # typescript
-node_modules/
-dist/
-.turbo/
+node_modules
+dist
+.turbo

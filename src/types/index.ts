@@ -7,104 +7,74 @@
 import * as _0 from "./StardexToken.types";
 import * as _1 from "./StardexToken.client";
 import * as _2 from "./StardexToken.react-query";
-import * as _3 from "./StardexToken.provider";
-import * as _4 from "./StardexCoinRegistry.types";
-import * as _5 from "./StardexCoinRegistry.client";
-import * as _6 from "./StardexCoinRegistry.react-query";
-import * as _7 from "./StardexCoinRegistry.provider";
-import * as _8 from "./StardexFactory.types";
-import * as _9 from "./StardexFactory.client";
-import * as _10 from "./StardexFactory.react-query";
-import * as _11 from "./StardexFactory.provider";
-import * as _12 from "./StardexPair.types";
-import * as _13 from "./StardexPair.client";
-import * as _14 from "./StardexPair.react-query";
-import * as _15 from "./StardexPair.provider";
-import * as _16 from "./StardexPairStable.types";
-import * as _17 from "./StardexPairStable.client";
-import * as _18 from "./StardexPairStable.react-query";
-import * as _19 from "./StardexPairStable.provider";
-import * as _20 from "./StardexPairConcentrated.types";
-import * as _21 from "./StardexPairConcentrated.client";
-import * as _22 from "./StardexPairConcentrated.react-query";
-import * as _23 from "./StardexPairConcentrated.provider";
-import * as _24 from "./StardexRouter.types";
-import * as _25 from "./StardexRouter.client";
-import * as _26 from "./StardexRouter.react-query";
-import * as _27 from "./StardexRouter.provider";
-import * as _28 from "./StardexStakeNative.types";
-import * as _29 from "./StardexStakeNative.client";
-import * as _30 from "./StardexStakeNative.react-query";
-import * as _31 from "./StardexStakeNative.provider";
-import * as _32 from "./StardexStakeRewards.types";
-import * as _33 from "./StardexStakeRewards.client";
-import * as _34 from "./StardexStakeRewards.react-query";
-import * as _35 from "./StardexStakeRewards.provider";
-import * as _36 from "./contractContextProviders";
-import * as _37 from "./contractContextBase";
-import * as _38 from "./contracts-context";
+import * as _3 from "./StardexCoinRegistry.types";
+import * as _4 from "./StardexCoinRegistry.client";
+import * as _5 from "./StardexCoinRegistry.react-query";
+import * as _6 from "./StardexFactory.types";
+import * as _7 from "./StardexFactory.client";
+import * as _8 from "./StardexFactory.react-query";
+import * as _9 from "./StardexPair.types";
+import * as _10 from "./StardexPair.client";
+import * as _11 from "./StardexPair.react-query";
+import * as _12 from "./StardexPairStable.types";
+import * as _13 from "./StardexPairStable.client";
+import * as _14 from "./StardexPairStable.react-query";
+import * as _15 from "./StardexPairConcentrated.types";
+import * as _16 from "./StardexPairConcentrated.client";
+import * as _17 from "./StardexPairConcentrated.react-query";
+import * as _18 from "./StardexRouter.types";
+import * as _19 from "./StardexRouter.client";
+import * as _20 from "./StardexRouter.react-query";
+import * as _21 from "./StardexStakeNative.types";
+import * as _22 from "./StardexStakeNative.client";
+import * as _23 from "./StardexStakeNative.react-query";
+import * as _24 from "./StardexStakeRewards.types";
+import * as _25 from "./StardexStakeRewards.client";
+import * as _26 from "./StardexStakeRewards.react-query";
 export namespace contracts {
   export const StardexToken = {
     ..._0,
     ..._1,
-    ..._2,
-    ..._3
+    ..._2
   };
   export const StardexCoinRegistry = {
+    ..._3,
     ..._4,
-    ..._5,
-    ..._6,
-    ..._7
+    ..._5
   };
   export const StardexFactory = {
-    ..._8,
+    ..._6,
+    ..._7,
+    ..._8
+  };
+  export const StardexPair = {
     ..._9,
     ..._10,
     ..._11
   };
-  export const StardexPair = {
+  export const StardexPairStable = {
     ..._12,
     ..._13,
-    ..._14,
-    ..._15
-  };
-  export const StardexPairStable = {
-    ..._16,
-    ..._17,
-    ..._18,
-    ..._19
+    ..._14
   };
   export const StardexPairConcentrated = {
-    ..._20,
+    ..._15,
+    ..._16,
+    ..._17
+  };
+  export const StardexRouter = {
+    ..._18,
+    ..._19,
+    ..._20
+  };
+  export const StardexStakeNative = {
     ..._21,
     ..._22,
     ..._23
   };
-  export const StardexRouter = {
+  export const StardexStakeRewards = {
     ..._24,
     ..._25,
-    ..._26,
-    ..._27
-  };
-  export const StardexStakeNative = {
-    ..._28,
-    ..._29,
-    ..._30,
-    ..._31
-  };
-  export const StardexStakeRewards = {
-    ..._32,
-    ..._33,
-    ..._34,
-    ..._35
-  };
-  export const undefined = {
-    ..._36
-  };
-  export const contractContextBase = {
-    ..._37
-  };
-  export const contractsContext = {
-    ..._38
+    ..._26
   };
 }

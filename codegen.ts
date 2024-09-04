@@ -69,9 +69,6 @@ codegen({
     messageBuilder: {
       enabled: false,
     },
-    useContractsHook: {
-      enabled: true,
-    },
   },
 }).then(() => {
   console.log('✨ all done!')

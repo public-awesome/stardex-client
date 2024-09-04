@@ -1,7 +1,9 @@
 export * from './types'
 
-import * as AstroportFactorySchemas from './zod/AstroportFactorySchemas'
+import * as StardexFactorySchemas from './zod/StardexFactorySchemas'
+import * as StardexStakeNativeSchemas from './zod/StardexStakeNativeSchemas'
 
 export const zod = {
-  AstroportFactorySchemas,
+  StardexFactorySchemas,
+  StardexStakeNativeSchemas,
 }
